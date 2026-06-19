@@ -77,10 +77,21 @@ Krieger im Hintergrund senken die Köpfe.
 
 ---
 
-## Audio / Voiceover (optional)
+## Audio / Voiceover
 
-- **Erzähler (tief, episch):** „Das Heer von Anadolu Limburg stand bereit. Die Nacht
-  war kalt — doch ihr Mut brannte heller als jedes Feuer."
+> **Sprache: Japanisch (Anime-Voiceover/-Dialog), mit deutschen Untertiteln.**
+> Die eingeblendeten Untertitel (oben in den Shots) sind die deutsche Übersetzung;
+> gesprochen wird auf Japanisch im Anime-Stil.
+
+| Shot | Untertitel (DE) | Gesprochen (JA, Romaji) |
+|------|-----------------|--------------------------|
+| 2 | „Morgen reiten wir gegen die Feinde." | „Ashita, teki ni mukatte susumu." |
+| 3 | „Heute Nacht schreiben wir Geschichte." | „Konya, wareware ga rekishi o tsukuru." |
+| 4 | „Für Anadolu!" | „Anadoru no tame ni!" |
+
+- **Erzähler (tief, episch, Japanisch):** sinngemäß „Das Heer von Anadolu Limburg stand
+  bereit. Die Nacht war kalt — doch ihr Mut brannte heller als jedes Feuer."
+  (DE als Untertitel eingeblendet.)
 - **Musik:** Epischer Taiko/Orchester-Anime-Battle-Track, anschwellend.
 
 ## Modell-Notizen (Higgsfield)

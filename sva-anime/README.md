@@ -11,7 +11,7 @@ am viralen Referenzvideo (@deepvaultai, „AI Anime Battle / World Cup"):
 - **Figuren:**
   - **Heerführer / Feldherr** — Sercan Selcuk Kaya (`assets/heerfuehrer-sercan.jpeg`), Anführer des Heeres
   - **Krieger** — SVA-Spieler, Rüstung/Helme **über** dem grau-weißen SVA-Trikot, SVA-Wappen auf Bannern und Schilden
-- **Dialoge:** Untertitel im Anime-Stil (deutsch oder türkisch), epische Erzählerstimme
+- **Dialoge:** gesprochen **Japanisch** (Anime-Voiceover) mit **deutschen Untertiteln**, epische Erzählerstimme
 - **Gesichter:** Charakter-Referenz aus dem Teamfoto (`assets/team.png`), dem Heerführer-Porträt (`assets/heerfuehrer-sercan.jpeg`) + Wappen (`assets/logo.jpeg`)
 
 ## Pipeline (mit Higgsfield)
