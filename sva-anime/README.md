@@ -8,9 +8,11 @@ am viralen Referenzvideo (@deepvaultai, „AI Anime Battle / World Cup"):
 - **Stil:** Japanischer Anime-Cinematic-Look, cel-shaded, filmisch, dramatisches Licht
 - **Format:** Hochformat 9:16 (Reel/TikTok), Szenen à ca. 5–8 Sekunden
 - **Setting:** Mittelalterliches osmanisches Heerlager, Zelte, Banner, Lagerfeuer, Dämmerung/Nacht
-- **Figuren:** SVA-Spieler als Krieger — Rüstung/Helme **über** dem grau-weißen SVA-Trikot, SVA-Wappen auf Bannern und Schilden
+- **Figuren:**
+  - **Heerführer / Feldherr** — Sercan Selcuk Kaya (`assets/heerfuehrer-sercan.jpeg`), Anführer des Heeres
+  - **Krieger** — SVA-Spieler, Rüstung/Helme **über** dem grau-weißen SVA-Trikot, SVA-Wappen auf Bannern und Schilden
 - **Dialoge:** Untertitel im Anime-Stil (deutsch oder türkisch), epische Erzählerstimme
-- **Gesichter:** Charakter-Referenz aus dem Teamfoto (`assets/team.png`) + Wappen (`assets/logo.jpeg`)
+- **Gesichter:** Charakter-Referenz aus dem Teamfoto (`assets/team.png`), dem Heerführer-Porträt (`assets/heerfuehrer-sercan.jpeg`) + Wappen (`assets/logo.jpeg`)
 
 ## Pipeline (mit Higgsfield)
 

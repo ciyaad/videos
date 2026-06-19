@@ -1,7 +1,11 @@
 # Szene 01 — „Vorbereitung im Heerlager" (Test-Szene)
 
-**Dauer:** ca. 8 Sekunden · **Format:** 9:16 · **Stil:** Anime-Cinematic, cel-shaded, filmisch
+**Dauer:** ca. 11 Sekunden · **Format:** 9:16 · **Stil:** Anime-Cinematic, cel-shaded, filmisch
 **Setting:** Osmanisches Heerlager am Vorabend der Schlacht, Dämmerung, Lagerfeuer, Zelte, Banner mit SVA-Wappen
+
+**Figuren:**
+- **Heerführer / Feldherr** — Sercan Selcuk Kaya (`assets/heerfuehrer-sercan.jpeg`), Anführer des Heeres
+- **Krieger** — Spieler von SV Anadolu Limburg (`assets/team.png`)
 
 ---
 
@@ -36,16 +40,38 @@ fliegen, Banner wehen im Wind.
 
 ---
 
-## Shot 3 — Held-Closeup (0:06–0:08)
+## Shot 3 — Auftritt des Heerführers (0:06–0:09)
+
+> **Hauptfigur: der Heerführer (Feldherr)** — gespielt von **Sercan Selcuk Kaya**.
+> Er ist der Anführer des Heeres von Anadolu.
 
 **Bild (Keyframe-Prompt):**
-> Anime cinematic, cel-shaded, vertical 9:16. Extreme close-up of an Ottoman warrior's
-> face, determined smile, war paint, ornate helmet with crescent motif, a sword
-> raised beside him, dramatic backlight, embers, epic anime film still.
+> Anime cinematic, cel-shaded, vertical 9:16. A commanding Ottoman general (the warlord)
+> stepping forward through the war camp, ornate gold-and-crimson armor with a fur-lined
+> cape over a grey-and-white "SVA" tabard, a crescent-crested helmet held under one arm,
+> short black beard, intense confident gaze, full beard, warriors bowing around him,
+> giant Ottoman banners and the SVA crest behind, torchlight, epic low-angle hero shot.
 
-> **Gesichts-Referenz:** Kapitän/Hauptspieler aus `assets/team.png`.
+> **Gesichts-Referenz:** `assets/heerfuehrer-sercan.jpeg` (Charakter-Referenz-Rolle — Gesicht des Feldherrn).
 
-**Animation:** Langsamer Zoom auf das Gesicht, Augen heben sich entschlossen, Wind in den Haaren.
+**Animation:** Heroischer Low-Angle, langsamer Push nach oben; sein Umhang weht, er hebt den Blick,
+Krieger im Hintergrund senken die Köpfe.
+
+**Untertitel:** *„Heute Nacht schreiben wir Geschichte."*
+
+---
+
+## Shot 4 — Schlachtruf (0:09–0:11)
+
+**Bild (Keyframe-Prompt):**
+> Anime cinematic, cel-shaded, vertical 9:16. Extreme close-up of the warlord's face
+> (same character), determined battle smile, war paint, drawing a curved sword skyward,
+> sparks and embers, the whole army raising swords behind him, dramatic backlight,
+> epic anime film still.
+
+> **Gesichts-Referenz:** `assets/heerfuehrer-sercan.jpeg`.
+
+**Animation:** Schwert reißt nach oben, Heer brüllt, Kamera-Shake auf den Schrei, Funkenregen.
 
 **Untertitel:** *„Für Anadolu!"*
 
