@@ -25,10 +25,21 @@ am viralen Referenzvideo (@deepvaultai, „AI Anime Battle / World Cup"):
 ## Status
 
 - [x] Konzept & Storyboard (siehe `scenes/scene-01-lager.md`)
-- [ ] Higgsfield-Verbindung aktiv (aktuell vom Connector blockiert)
-- [ ] Keyframes generiert
-- [ ] Test-Szene animiert
+- [x] Higgsfield-Verbindung aktiv
+- [x] Test-Keyframe generiert (Shot 3 — Heerführer, Gesichts-Referenz) → `output/test/shot3-heerfuehrer-keyframe.png`
+- [x] Test-Szene animiert (5 s, 9:16, image-to-video) → `output/test/shot3-heerfuehrer-test.mp4`
+- [ ] Restliche Shots (1, 2, 4) als Keyframes + Animation
+- [ ] Schnitt, japanisches Voiceover + deutsche Untertitel, Musik
 
-> Hinweis: Generierung ist aktuell blockiert, weil die Higgsfield-Verbindung jeden
-> Aufruf abweist. Sobald die Integration neu verbunden ist (und Guthaben vorhanden),
-> wird die Test-Szene Shot für Shot umgesetzt.
+## Test-Ergebnis (Shot 3)
+
+Pipeline-Test erfolgreich end-to-end durchgelaufen:
+
+1. **Referenz** — `heerfuehrer-sercan.jpeg` + `logo.jpeg` via URL-Import nach Higgsfield.
+2. **Keyframe** — `nano_banana_2` (Nano Banana Pro), 9:16, Gesicht/Bart von Sercan
+   erkennbar in Anime-Cinematic-Stil übernommen.
+3. **Animation** — `kling3_0_turbo`, image-to-video, 5 s, 720p, langsamer Heldenshot-Push.
+
+> Bekannter Punkt für die finale Version: Das KI-generierte Wappen liest „SUB" statt
+> „SVA". Fix: Wappen-Text per Prompt erzwingen oder das echte `logo.jpeg` im Schnitt
+> als Overlay einsetzen.
