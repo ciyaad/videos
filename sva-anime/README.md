@@ -26,20 +26,33 @@ am viralen Referenzvideo (@deepvaultai, „AI Anime Battle / World Cup"):
 
 - [x] Konzept & Storyboard (siehe `scenes/scene-01-lager.md`)
 - [x] Higgsfield-Verbindung aktiv
-- [x] Test-Keyframe generiert (Shot 3 — Heerführer, Gesichts-Referenz) → `output/test/shot3-heerfuehrer-keyframe.png`
-- [x] Test-Szene animiert (5 s, 9:16, image-to-video) → `output/test/shot3-heerfuehrer-test.mp4`
+- [x] Test-Keyframe generiert (Shot 3 — Heerführer, Gesichts-Referenz, Wappen „SVA") → `output/test/shot3-v2-keyframe.png`
+- [x] Test-Szene animiert (5 s, 9:16, image-to-video) → `output/test/shot3-v2-raw.mp4`
+- [x] Japanisches Voiceover + deutscher Untertitel + Musik → **`output/test/shot3-final.mp4`**
 - [ ] Restliche Shots (1, 2, 4) als Keyframes + Animation
-- [ ] Schnitt, japanisches Voiceover + deutsche Untertitel, Musik
+- [ ] Alle Shots zur kompletten Szene zusammenschneiden
 
-## Test-Ergebnis (Shot 3)
+## Test-Ergebnis (Shot 3 — fertige Szene)
 
-Pipeline-Test erfolgreich end-to-end durchgelaufen:
+Komplette Mini-Szene end-to-end durchgelaufen → **`output/test/shot3-final.mp4`** (5 s, 9:16):
 
 1. **Referenz** — `heerfuehrer-sercan.jpeg` + `logo.jpeg` via URL-Import nach Higgsfield.
 2. **Keyframe** — `nano_banana_2` (Nano Banana Pro), 9:16, Gesicht/Bart von Sercan
-   erkennbar in Anime-Cinematic-Stil übernommen.
-3. **Animation** — `kling3_0_turbo`, image-to-video, 5 s, 720p, langsamer Heldenshot-Push.
+   übernommen, Wappen liest „SVA" (`shot3-v2-keyframe.png`).
+3. **Animation** — `kling3_0_turbo`, image-to-video, 5 s, 720p: Schlachtruf, Faust hoch,
+   Banner & Funken wehen (`shot3-v2-raw.mp4`).
+4. **Voiceover** — `text2speech_v2_elevenlabs` (Stimme „Orion"), Japanisch:
+   „野郎ども、準備はいいか！" (= „Seid ihr bereit, Männer?") → `voiceover-ja.mp3`.
+5. **Musik** — `sonilo_music`, epische Taiko/Orchester-Battle-Spur → `music-taiko.m4a`.
+6. **Schnitt** — ffmpeg: Voiceover (Einsatz ~1 s) über leiser Musik, deutscher Untertitel
+   „Seid ihr bereit, Männer?" eingebrannt.
 
-> Bekannter Punkt für die finale Version: Das KI-generierte Wappen liest „SUB" statt
-> „SVA". Fix: Wappen-Text per Prompt erzwingen oder das echte `logo.jpeg` im Schnitt
-> als Overlay einsetzen.
+### Pipeline-Referenz (für die restlichen Shots)
+
+| Schritt    | Modell / Tool                  | Parameter                         |
+|------------|--------------------------------|-----------------------------------|
+| Keyframe   | `nano_banana_2`                | 9:16, Gesichts-/Wappen-Referenz   |
+| Animation  | `kling3_0_turbo`               | image-to-video, 5 s, 720p, 9:16   |
+| Voiceover  | `text2speech_v2_elevenlabs`    | Stimme „Orion", Japanisch         |
+| Musik      | `sonilo_music`                 | Taiko/Orchester, ~6 s             |
+| Schnitt    | ffmpeg                         | amix + drawtext (DE-Untertitel)   |
