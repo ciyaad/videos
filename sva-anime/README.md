@@ -1,58 +1,100 @@
-# SV Anadolu Limburg — Anime Cinematic Serie
+# SV Anadolu — Anime Cinematic Reel
 
-Konzept: Die Mannschaft von **SV Anadolu Limburg** wird im Stil eines epischen
-Anime-Cinematics als **osmanisches Heer im Mittelalter** dargestellt, das sich auf
-eine große Schlacht gegen die Feinde vorbereitet. Stil und Format orientieren sich
-am viralen Referenzvideo (@deepvaultai, „AI Anime Battle / World Cup"):
+Die Mannschaft von **SV Anadolu** als epische **osmanisch-türkische Eliteeinheit**,
+die sich im Heerlager vor der Schlacht sammelt. Hochwertiger, halb-realistischer
+Anime-Look im Stil des viralen Referenzvideos (@deepvaultai / „AnimeBlip"). Keine
+Fußball-Elemente, kein modernes Setting.
 
-- **Stil:** Japanischer Anime-Cinematic-Look, cel-shaded, filmisch, dramatisches Licht
-- **Format:** Hochformat 9:16 (Reel/TikTok), Szenen à ca. 5–8 Sekunden
-- **Setting:** Mittelalterliches osmanisches Heerlager, Zelte, Banner, Lagerfeuer, Dämmerung/Nacht
-- **Figuren:**
-  - **Heerführer / Feldherr** — Sercan Selcuk Kaya (`assets/heerfuehrer-sercan.jpeg`), Anführer des Heeres
-  - **Krieger** — SVA-Spieler, Rüstung/Helme **über** dem grau-weißen SVA-Trikot, SVA-Wappen auf Bannern und Schilden
-- **Dialoge:** gesprochen **Japanisch** (Anime-Voiceover) mit **deutschen Untertiteln**, epische Erzählerstimme
-- **Gesichter:** Charakter-Referenz aus dem Teamfoto (`assets/team.png`), dem Heerführer-Porträt (`assets/heerfuehrer-sercan.jpeg`) + Wappen (`assets/logo.jpeg`)
+- **Stil:** halb-realistischer Anime (cel-shaded, erkennbare echte Gesichter), osmanisch-türkische Rüstungen, rote/goldene Akzente, Fackeln, Banner, Staub, dramatisches Licht
+- **Format:** Hochformat 9:16 (Reel/TikTok)
+- **Sprache:** Dialog **gesprochen Japanisch** (Kling-eigener Lippensync) mit **deutschen Untertiteln** (nur bei gesprochenen Sätzen)
+- **Ton:** keine Erzählerstimme, keine Handlungstexte; nur Naturgeräusche (Wind, Feuer, Rüstung) — **Musik erst ab der Heerführer-Ansage**
 
-## Pipeline (mit Higgsfield)
+## Aktueller Stand
 
-1. **Referenz hochladen** — Teamfoto + Wappen via `media_upload`
-2. **Keyframe-Bilder** je Shot generieren (anime image, Gesicht als Referenz)
-3. **Animation** — image-to-video je Keyframe (5–8 s)
-4. **Schnitt** — Shots aneinanderhängen, Untertitel + Musik/Voiceover
-5. **Export** — 9:16 Reel
+**Endfassung: [`output/sva-anadolu-anime-v3.mp4`](output/sva-anadolu-anime-v3.mp4)** (~46 s, 9:16)
 
-## Status
+- [x] Konzept & Storyboard (`scenes/scene-01-lager.md`)
+- [x] Higgsfield-Pipeline aktiv, Stil + Lippensync bestätigt
+- [x] Alle Spielerfotos importiert (6 von 7 + Heerführer)
+- [x] Zwei-Personen-Gespräche (Schuss-Gegenschuss) animiert
+- [x] Kompletter Schnitt mit Crossfade-Übergängen, Tonbrücke, Musik-Einsatz spät
+- [ ] **Abdi & Hakan** als eigene Sprecher (Fotos fehlen noch)
+- [ ] Echtes **Logo-Overlay** statt KI-Wappen (liest teils „SUA"/„SUB")
+- [ ] Optional: separate Nahaufnahmen pro Sprecher (echter Kamerawechsel)
 
-- [x] Konzept & Storyboard (siehe `scenes/scene-01-lager.md`)
-- [x] Higgsfield-Verbindung aktiv
-- [x] Test-Keyframe generiert (Shot 3 — Heerführer, Gesichts-Referenz, Wappen „SVA") → `output/test/shot3-v2-keyframe.png`
-- [x] Test-Szene animiert (5 s, 9:16, image-to-video) → `output/test/shot3-v2-raw.mp4`
-- [x] Japanisches Voiceover + deutscher Untertitel + Musik → **`output/test/shot3-final.mp4`**
-- [ ] Restliche Shots (1, 2, 4) als Keyframes + Animation
-- [ ] Alle Shots zur kompletten Szene zusammenschneiden
+## Figuren & Gesichts-Referenzen
 
-## Test-Ergebnis (Shot 3 — fertige Szene)
+Heerführer = **Sercan / „selcuk11"**. Spieler = Krieger.
 
-Komplette Mini-Szene end-to-end durchgelaufen → **`output/test/shot3-final.mp4`** (5 s, 9:16):
+| Rolle | Name | Foto / Higgsfield media_id |
+|---|---|---|
+| Heerführer | Sercan (selcuk11) | `assets/heerfuehrer-sercan.jpeg` · `1a59837f-bb0d-4e18-9bf1-34e648dfb93b` |
+| Krieger | **Ciyo** = Cihad | `cihad4.jfif` · `273df882-5b04-4776-8de9-0a992374d267` |
+| Krieger | **Furki** = Furkan | `furkan3.jpeg` · `e90bd97d-a278-45ba-98e4-b1d5ddbf4228` |
+| Krieger | **Musti** | `musti2.jpeg` · `2cd2cfde-6c49-45e2-9822-5bccb348d9a2` |
+| Krieger | **Muro** | `muro.webp` · `ee608af3-9bea-4a55-b2c4-e3720acff9b7` |
+| Krieger | **Voli** | `voli.webp` · `06b1fe81-96ce-4058-b9fa-43e9a8a77100` |
+| Krieger | **Abdi** | _Foto fehlt — noch hochladen_ |
+| Krieger | **Hakan** | _Foto fehlt — noch hochladen_ |
+| Wappen | SV Anadolu | `assets/logo.jpeg` · `dc25694b-62a6-4cb7-9849-48ac2754546d` |
 
-1. **Referenz** — `heerfuehrer-sercan.jpeg` + `logo.jpeg` via URL-Import nach Higgsfield.
-2. **Keyframe** — `nano_banana_2` (Nano Banana Pro), 9:16, Gesicht/Bart von Sercan
-   übernommen, Wappen liest „SVA" (`shot3-v2-keyframe.png`).
-3. **Animation** — `kling3_0_turbo`, image-to-video, 5 s, 720p: Schlachtruf, Faust hoch,
-   Banner & Funken wehen (`shot3-v2-raw.mp4`).
-4. **Voiceover** — `text2speech_v2_elevenlabs` (Stimme „Orion"), Japanisch:
-   „野郎ども、準備はいいか！" (= „Seid ihr bereit, Männer?") → `voiceover-ja.mp3`.
-5. **Musik** — `sonilo_music`, epische Taiko/Orchester-Battle-Spur → `music-taiko.m4a`.
-6. **Schnitt** — ffmpeg: Voiceover (Einsatz ~1 s) über leiser Musik, deutscher Untertitel
-   „Seid ihr bereit, Männer?" eingebrannt.
+> Hinweis: media_ids gelten für den aktuellen Higgsfield-Workspace. Bei neuem
+> Workspace die Assets neu importieren (Repo ist public → URL-Import möglich).
 
-### Pipeline-Referenz (für die restlichen Shots)
+## Schnitt-Aufbau v3 (~46 s)
 
-| Schritt    | Modell / Tool                  | Parameter                         |
-|------------|--------------------------------|-----------------------------------|
-| Keyframe   | `nano_banana_2`                | 9:16, Gesichts-/Wappen-Referenz   |
-| Animation  | `kling3_0_turbo`               | image-to-video, 5 s, 720p, 9:16   |
-| Voiceover  | `text2speech_v2_elevenlabs`    | Stimme „Orion", Japanisch         |
-| Musik      | `sonilo_music`                 | Taiko/Orchester, ~6 s             |
-| Schnitt    | ffmpeg                         | amix + drawtext (DE-Untertitel)   |
+| # | Szene | Spieler | Gesprochen (JP) → Untertitel (DE) |
+|---|---|---|---|
+| 1 | Heerlager bei Nacht (Establishing) | — | nur Naturgeräusche |
+| 2 | Gespräch am Feuer | **Furki → Ciyo** | 今年は誰にも負けない！ → „Dieses Jahr besiegt uns keiner." |
+| 3 | …Gegenschnitt | **Ciyo → Furki** | アナドルの強さを見せてやる。 → „Jeder merkt, wer Anadolu ist." |
+| 4 | Gespräch am Feuer | **Musti → Muro** | 全員、叩きのめす！ → „Wir schlagen sie alle." |
+| 5 | …Gegenschnitt | **Muro → Musti** | 敵は皆、倒れる。 → „Jeder Gegner fällt." |
+| 6 | Am Banner | **Voli** | アナドルは止められない。 → „Keiner stoppt Anadolu." |
+| 7 | Schwur (Hände auf dem Wappen) | alle | 今年はアナドルのものだ！ → „Dieses Jahr gehört Anadolu." |
+| 8 | Das Horn der Feinde | — | nur Horn/Wind |
+| 9 | Heerführer tritt hervor | Sercan | — |
+| 10 | Ansage (**Musik startet**) | Sercan | 今年、我らの名が知れ渡る。 → „Dieses Jahr kennt man unsere Namen." |
+| 11 | Der Ruf (Klimax) | Sercan | アナドルのために！ → **„Für Anadolu!"** |
+
+## Pipeline (Higgsfield + ffmpeg)
+
+| Schritt | Modell / Tool | Parameter |
+|---|---|---|
+| Referenz-Import | `media_import_url` (public Raw-URL) bzw. Upload-Widget | Gesichter + Wappen |
+| Keyframe | `nano_banana_2` (Nano Banana Pro) | 9:16, halb-realistischer Anime, Gesichts-/Wappen-Referenz |
+| Animation + Stimme | `kling3_0` (mode std, **sound: on**) | image-to-video, 5 s, 720p, 9:16 — **Kling erzeugt lippensynchrone Stimme**, gesprochene Zeile steht im Prompt |
+| Musik | `sonilo_music` | epische Taiko/Orchester-Spur (~32 s) |
+| Schnitt | ffmpeg | `xfade`/`acrossfade` (Crossfade-Flow), `drawtext` (DE-Untertitel, Schrift Arial Bold), Musik via `adelay` ab Ansage |
+
+**Wichtige Erkenntnis:** Lippensync kommt aus **Kling 3.0 selbst** (`sound: on`, gesprochene
+Zeile im Prompt). Separat erzeugte TTS (`text2speech_v2_*`) klang zu weich und war nicht
+synchron — wird nicht mehr verwendet (Reste liegen noch unter `output/test/voiceover-*`).
+
+## Datei-Übersicht
+
+```
+sva-anime/
+  README.md                         dieses Dokument
+  assets/                           Eingangs-Fotos + Wappen
+  scenes/scene-01-lager.md          Original-Storyboard
+  output/
+    sva-anadolu-anime-v3.mp4        >>> aktuelle Endfassung <<<
+    sva-anadolu-anime-v2.mp4        Vorgänger (11 Einzel-Shots, kein Zwei-Personen-Dialog)
+    sva-anadolu-anime.mp4           erste 6-Szenen-Fassung
+    test/
+      scenes/
+        c-furki/c-ciyo/c-musti/c-muro/c-voli.mp4   Zwei-Personen-Gesprächsclips (v3)
+        kf-furkiciyo / kf-mustimuro / kf-*.png      Keyframes
+        s1..s6.mp4, d-*.mp4                          Einzel-Shots & frühere Dialog-Clips
+        music32.m4a                                 Musikspur (32 s)
+      shot3-*.mp4 / roar-*.mp4 / voiceover-*         frühere Shot-3-Tests
+```
+
+## Nächste Schritte
+
+1. Fotos von **Abdi** & **Hakan** hochladen → je ein Gesprächs-/Sprech-Shot.
+2. Echtes `logo.jpeg` als sauberes Overlay auf die Banner legen (Wappen-Fix).
+3. Optional: pro Sprecher echte Einzel-Nahaufnahme (separater Kamerawinkel) für noch
+   filmischeren Schuss-Gegenschuss.
